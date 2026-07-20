@@ -1,0 +1,186 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+} 
+
+body { 
+  /* Menggunakan pola titik-titik (dot grid) abu-abu tipis di latar belakang agar estetik tapi tetap bersih */
+  background-color: #fafafa;
+  background-image: radial-gradient(#e5e7eb 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  padding: 20px; 
+} 
+
+.profile-card { 
+  background: #ffffff; 
+  max-width: 400px; 
+  width: 100%; 
+  border-radius: 20px; /* Sudut melengkung modern */
+  /* Bayangan berlapis tipis agar kartu terlihat elegan dan mengambang alami */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 12px 30px rgba(0,0,0,0.03); 
+  padding: 36px 32px; 
+  text-align: center; 
+  border: 1px solid #ededed; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+} 
+
+/* Sedikit interaksi halus saat kartu di-hover */
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 16px 40px rgba(0,0,0,0.05); 
+}
+
+.profile-header .avatar { 
+  width: 96px; 
+  height: 96px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-bottom: 18px; 
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Bayangan halus di bawah foto profil */
+} 
+
+.profile-header h1 { 
+  font-size: 23px; 
+  color: #111111; 
+  font-weight: 700; 
+  margin-bottom: 6px; 
+  letter-spacing: -0.3px;
+} 
+
+.profile-header h2 { 
+  font-size: 13.5px; 
+  color: #666666; 
+  font-weight: 400; 
+  margin-bottom: 28px; 
+} 
+
+/* Bagian Menu Navigasi bawah (Tetap pas di dalam kotak) */ 
+.profile-nav { 
+  display: flex; 
+  justify-content: space-between; 
+  gap: 4px; 
+  margin-bottom: 28px; 
+  background: #f5f5f5; /* Pembungkus abu-abu minimalis */
+  padding: 4px;
+  border-radius: 12px;
+  width: 100%;
+} 
+
+.profile-nav a { 
+  flex: 1;
+  text-align: center;
+  text-decoration: none; 
+  color: #777777; 
+  font-size: 12.5px; 
+  font-weight: 600; 
+  padding: 8px 4px; 
+  border-radius: 8px;
+  transition: all 0.2s ease; 
+  white-space: nowrap;
+} 
+
+/* Efek geser tombol aktif berwarna putih bersih */
+.profile-nav a:hover {
+  color: #111111;
+}
+
+.profile-nav a.active { 
+  color: #111111; 
+  background-color: #ffffff; /* Tab aktif menonjol ke atas */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+} 
+
+/* Bagian Isi Konten */ 
+.profile-section { 
+  text-align: left; 
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+} 
+
+.profile-section h3 { 
+  font-size: 11px; 
+  color: #999999; 
+  letter-spacing: 1px; 
+  margin-bottom: 14px; 
+  font-weight: 700; 
+  text-transform: uppercase;
+} 
+
+.profile-section p { 
+  font-size: 14px; 
+  color: #444444; 
+  line-height: 1.6; 
+} 
+
+/* Kotak proyek minimalis dengan garis border tipis */
+.project-item { 
+  background-color: #ffffff;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-bottom: 12px; 
+  border: 1px solid #eaeaea;
+  transition: all 0.2s ease;
+} 
+
+/* Efek hover interaktif tipis pada item proyek */
+.project-item:hover {
+  border-color: #b5b5b5;
+  background-color: #fafafa;
+}
+
+.project-item h4 { 
+  font-size: 14px; 
+  color: #111111; 
+  margin-bottom: 4px; 
+  font-weight: 600;
+} 
+
+.contact p { 
+  margin-bottom: 8px; 
+  color: #444444;
+  font-size: 14px;
+} 
+
+.profile-buttons { 
+  margin-top: 28px; 
+} 
+
+/* Tombol hitam pekat*/
+.btn { 
+  display: block; 
+  background-color: #111111; 
+  color: #ffffff; 
+  padding: 13px; 
+  border-radius: 10px; 
+  text-decoration: none; 
+  font-size: 13.5px; 
+  font-weight: 600; 
+  transition: all 0.2s ease; 
+} 
+
+.btn:hover { 
+  background-color: #222222;
+  transform: translateY(-1px);
+} 
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Animasi transisi */ 
+@keyframes slideUp { 
+  from { 
+    opacity: 0; 
+    transform: translateY(8px); 
+  } 
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  } 
+}
